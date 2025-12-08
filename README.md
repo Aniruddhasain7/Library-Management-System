@@ -2,6 +2,7 @@ A complete Library Management System with Admin & Student roles, built using Fla
 This project helps manage books, students, issue/return process, and authentication — all in a simple, clean interface.
 
 🚀 Features :
+
 🔐 Authentication
 
 • Admin Login / Signup
