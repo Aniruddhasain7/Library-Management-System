@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Library Management System</h1>
+</header>
+
+<section class="auth-section">
+    <h2>Login / Signup</h2>
+    <div class="auth-container">
+        <div class="login-box">
+            <h3>Student</h3>
+            <input type="text" id="studentUsername" placeholder="Username" required>
+            <input type="password" id="studentPassword" placeholder="Password" required>
+            <button onclick="loginRole('student')">Login</button>
+            <button onclick="signupRole('student')">Signup</button>
+        </div>
+        <div class="login-box">
+            <h3>Admin</h3>
+            <input type="text" id="adminUsername" placeholder="Username" required>
+            <input type="password" id="adminPassword" placeholder="Password" required>
+            <button onclick="loginRole('admin')">Login</button>
+            <button onclick="signupRole('admin')">Signup</button>
+        </div>
+    </div>
+</section>
+
+<section class="admin-section" style="display:none;">
+    <h2>Admin Dashboard</h2>
+    <div class="tabs">
+        <button onclick="showTab('bookManagement')">Book Management</button>
+        <button onclick="showTab('bookReport')">Book Report</button>
+        <button onclick="showTab('bookRequests')">Book Requests</button>
+        <button onclick="showTab('studentManagement')">Add Student</button>
+        <button onclick="showTab('studentReport')">Student Report</button>
+        <button onclick="showTab('issueReport')">Issue Report</button>
+        <button id="logoutBtn">Logout</button>
+    </div>
+
+    <div id="bookManagement" class="tab-content" style="display:none;">
+        <h3>Add / Edit Book</h3>
+        <form id="addBookForm">
+            <input type="hidden" id="bookId">
+            <input type="text" id="title" placeholder="Book Title" required>
+            <input type="text" id="author" placeholder="Author" required>
+            <input type="number" id="copies" placeholder="Copies" required>
+            <button type="submit" id="saveBtn">Add Book</button>
+        </form>
+    </div>
+
+    <div id="bookReport" class="tab-content" style="display:none;">
+        <h3>Book Report</h3>
+        <table id="bookReportTable">
+            <thead>
+                <tr><th>ID</th><th>Title</th><th>Author</th><th>Copies</th><th>Actions</th></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div id="bookRequests" class="tab-content" style="display:none;">
+        <h3>Book Requests</h3>
+        <table id="bookRequestsTable">
+            <thead>
+                <tr><th>Request ID</th><th>Student</th><th>Book</th><th>Status</th><th>Actions</th></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div id="studentManagement" class="tab-content" style="display:none;">
+        <h3>Add Student</h3>
+        <input type="text" id="newStudentUsername" placeholder="Username" required>
+        <input type="password" id="newStudentPassword" placeholder="Password" required>
+        <button onclick="addStudent()">Add Student</button>
+    </div>
+
+    <div id="studentReport" class="tab-content" style="display:none;">
+        <h3>Student Report</h3>
+        <table id="studentReportTable">
+            <thead>
+                <tr><th>ID</th><th>Username</th><th>Role</th></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div id="issueReport" class="tab-content" style="display:none;">
+        <h3>Issue Report</h3>
+        <table id="issueReportTable">
+            <thead>
+                <tr><th>ID</th><th>Student</th><th>Book</th><th>Issue Date</th><th>Status</th></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</section>
+
+<section class="student-section" style="display:none;">
+    <h2>Student Dashboard</h2>
+
+    <h3>Available Books</h3>
+    <table id="studentBookTable">
+        <thead>
+            <tr><th>ID</th><th>Title</th><th>Author</th><th>Copies</th><th>Actions</th></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <h3>My Issued Books</h3>
+    <table id="myIssuedTable">
+        <thead>
+            <tr><th>ID</th><th>Title</th><th>Issue Date</th><th>Status</th><th>Actions</th></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <button id="logoutBtnStudent" class="logout-bottom">Logout</button>
+</section>
+
+
+<script src="script.js"></script>
+</body>
+</html>
