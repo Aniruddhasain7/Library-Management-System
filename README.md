@@ -21,7 +21,7 @@ This project helps manage books, students, issue/return process, and authenticat
 
 • Search Books
 
-👥 Student Management (Admin)
+👥 Student Management
 
 • Add New Students
 
