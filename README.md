@@ -1,9 +1,9 @@
-📚 A complete Library Management System with Admin & Student roles, built using Flask backend and HTML/CSS/JS frontend.
+# 📚 A complete Library Management System with Admin & Student roles, built using Flask backend and HTML/CSS/JS frontend.
 This project helps manage books, students, issue/return process, and authentication — all in a simple, clean interface.
 
-🚀 Features :
+## 🚀 Features :
 
-🔐 Authentication
+### 🔐 Authentication
 
 • Admin Login / Signup
 
@@ -11,7 +11,7 @@ This project helps manage books, students, issue/return process, and authenticat
 
 • Role-based dashboard
 
-📘 Book Management (Admin)
+### 📘 Book Management (Admin)
 
 • Add New Books
 
@@ -21,7 +21,7 @@ This project helps manage books, students, issue/return process, and authenticat
 
 • Search Books
 
-👥 Student Management
+### 👥 Student Management
 
 • Add New Students
 
@@ -29,7 +29,7 @@ This project helps manage books, students, issue/return process, and authenticat
 
 • Student Report
 
-📖 Issue / Return System
+### 📖 Issue / Return System
 
 • Issue a book to a student
 
@@ -37,7 +37,7 @@ This project helps manage books, students, issue/return process, and authenticat
 
 • Students can view their issued books
 
-🎨 Modern Frontend
+## 🎨 Modern Frontend
 
 • HTML, CSS responsive UI
 
