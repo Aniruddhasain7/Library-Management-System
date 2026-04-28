@@ -62,18 +62,18 @@ graph LR
     UC10 --- Student
 
     %% Styling
-    style Admin fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
-    style Student fill:#f1f8e9,stroke:#2e7d32,stroke-width:2px
-    style UC1 fill:#fff,stroke:#333
-    style UC2 fill:#fff,stroke:#333
-    style UC3 fill:#fff,stroke:#333
-    style UC4 fill:#fff,stroke:#333
-    style UC5 fill:#fff,stroke:#333
-    style UC6 fill:#fff,stroke:#333
-    style UC7 fill:#fff,stroke:#333
-    style UC8 fill:#fff,stroke:#333
-    style UC9 fill:#fff,stroke:#333
-    style UC10 fill:#fff,stroke:#333
+    style Admin fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#fff
+    style Student fill:#1e293b,stroke:#4ade80,stroke-width:2px,color:#fff
+    style UC1 fill:#334155,stroke:#94a3b8,color:#fff
+    style UC2 fill:#334155,stroke:#94a3b8,color:#fff
+    style UC3 fill:#334155,stroke:#94a3b8,color:#fff
+    style UC4 fill:#334155,stroke:#94a3b8,color:#fff
+    style UC5 fill:#334155,stroke:#94a3b8,color:#fff
+    style UC6 fill:#334155,stroke:#94a3b8,color:#fff
+    style UC7 fill:#334155,stroke:#94a3b8,color:#fff
+    style UC8 fill:#334155,stroke:#94a3b8,color:#fff
+    style UC9 fill:#334155,stroke:#94a3b8,color:#fff
+    style UC10 fill:#334155,stroke:#94a3b8,color:#fff
 ```
 
 ## ⚙️ Setup Instructions
