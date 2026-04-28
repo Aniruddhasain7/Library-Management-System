@@ -33,33 +33,47 @@ graph LR
     Student((Student))
 
     subgraph "Library Management System"
+        direction TB
         UC1([Login / Signup])
-        UC2([Manage Books])
-        UC3([Manage Students])
-        UC4([Approve Requests])
-        UC5([View Reports])
-        UC6([Search Books])
-        UC7([Issue Book])
-        UC8([Request Book])
-        UC9([Return Book])
-        UC10([View Issued Books])
+        UC2([Manage Book Inventory])
+        UC3([Manage Student Records])
+        UC4([Approve Book Requests])
+        UC5([Generate Reports])
+        UC6([Browse & Search Books])
+        UC7([Instant Book Issue])
+        UC8([Submit Book Request])
+        UC9([Return Issued Book])
+        UC10([View Personal History])
     end
 
+    %% Admin Connections
     Admin --- UC1
     Admin --- UC2
     Admin --- UC3
     Admin --- UC4
     Admin --- UC5
 
-    Student --- UC1
-    Student --- UC6
-    Student --- UC7
-    Student --- UC8
-    Student --- UC9
-    Student --- UC10
+    %% Student Connections
+    UC1 --- Student
+    UC6 --- Student
+    UC7 --- Student
+    UC8 --- Student
+    UC9 --- Student
+    UC10 --- Student
 
-    style Admin fill:#f9f,stroke:#333,stroke-width:2px
-    style Student fill:#f9f,stroke:#333,stroke-width:2px
+    %% Styling
+    style Admin fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+    style Student fill:#f1f8e9,stroke:#2e7d32,stroke-width:2px
+    style UC1 fill:#fff,stroke:#333
+    style UC2 fill:#fff,stroke:#333
+    style UC3 fill:#fff,stroke:#333
+    style UC4 fill:#fff,stroke:#333
+    style UC5 fill:#fff,stroke:#333
+    style UC6 fill:#fff,stroke:#333
+    style UC7 fill:#fff,stroke:#333
+    style UC8 fill:#fff,stroke:#333
+    style UC9 fill:#fff,stroke:#333
+    style UC10 fill:#fff,stroke:#333
 ```
 
 ## ⚙️ Setup Instructions
