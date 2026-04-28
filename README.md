@@ -28,7 +28,7 @@ A comprehensive web-based Library Management System built with Python, Flask, an
 ## 📊 Use Case Diagram
 
 ```mermaid
-useCaseDiagram
+usecaseDiagram
     actor Admin
     actor Student
 
