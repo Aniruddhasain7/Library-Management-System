@@ -25,45 +25,58 @@ A comprehensive web-based Library Management System built with Python, Flask, an
 - **Database**: MySQL (PyMySQL)
 - **Frontend**: HTML5, CSS3, JavaScript
 
-## 📊 Use Case Diagram
+## 📊 System Workflow & Use Case Diagram
 
 ```mermaid
 graph LR
-    Admin((Admin))
-    Student((Student))
+    subgraph Users
+        Admin((Admin))
+        Student((Student))
+    end
 
     subgraph "Library Management System"
         direction TB
         UC1([Login / Signup])
         UC2([Manage Book Inventory])
         UC3([Manage Student Records])
-        UC4([Approve Book Requests])
-        UC5([Generate Reports])
+        UC4([Process Book Requests])
+        UC5([View Inventory Reports])
         UC6([Browse & Search Books])
-        UC7([Instant Book Issue])
-        UC8([Submit Book Request])
-        UC9([Return Issued Book])
-        UC10([View Personal History])
+        UC7([Issue/Request Book])
+        UC8([Return Issued Book])
     end
 
-    %% Admin Connections
-    Admin --- UC1
-    Admin --- UC2
-    Admin --- UC3
-    Admin --- UC4
-    Admin --- UC5
+    subgraph Storage
+        DB[(MySQL Database)]
+    end
 
-    %% Student Connections
-    UC1 --- Student
-    UC6 --- Student
-    UC7 --- Student
-    UC8 --- Student
-    UC9 --- Student
-    UC10 --- Student
+    %% Admin Workflow
+    Admin -- "Authenticates" --> UC1
+    Admin -- "Adds/Updates Books" --> UC2
+    Admin -- "Registers Students" --> UC3
+    Admin -- "Approves Requests" --> UC4
+    Admin -- "Analyzes Data" --> UC5
+
+    %% Student Workflow
+    Student -- "Authenticates" --> UC1
+    Student -- "Searches Catalog" --> UC6
+    Student -- "Borrows Books" --> UC7
+    Student -- "Returns Books" --> UC8
+
+    %% Database Interactions
+    UC1 -- "Verifies Credentials" --> DB
+    UC2 -- "Updates Book Table" --> DB
+    UC3 -- "Saves User Data" --> DB
+    UC4 -- "Updates Request Status" --> DB
+    UC5 -- "Fetches History" --> DB
+    UC6 -- "Reads Book Info" --> DB
+    UC7 -- "Logs Issue Record" --> DB
+    UC8 -- "Updates Availability" --> DB
 
     %% Styling
     style Admin fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#fff
     style Student fill:#1e293b,stroke:#4ade80,stroke-width:2px,color:#fff
+    style DB fill:#1e293b,stroke:#f59e0b,stroke-width:2px,color:#fff
     style UC1 fill:#334155,stroke:#94a3b8,color:#fff
     style UC2 fill:#334155,stroke:#94a3b8,color:#fff
     style UC3 fill:#334155,stroke:#94a3b8,color:#fff
@@ -72,8 +85,6 @@ graph LR
     style UC6 fill:#334155,stroke:#94a3b8,color:#fff
     style UC7 fill:#334155,stroke:#94a3b8,color:#fff
     style UC8 fill:#334155,stroke:#94a3b8,color:#fff
-    style UC9 fill:#334155,stroke:#94a3b8,color:#fff
-    style UC10 fill:#334155,stroke:#94a3b8,color:#fff
 ```
 
 ## ⚙️ Setup Instructions
