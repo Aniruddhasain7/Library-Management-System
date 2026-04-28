@@ -28,35 +28,38 @@ A comprehensive web-based Library Management System built with Python, Flask, an
 ## 📊 Use Case Diagram
 
 ```mermaid
-usecaseDiagram
-    actor Admin
-    actor Student
+graph LR
+    Admin((Admin))
+    Student((Student))
 
-    package "Library Management System" {
-        usecase "Login / Signup" as UC1
-        usecase "Manage Books" as UC2
-        usecase "Manage Students" as UC3
-        usecase "Approve Requests" as UC4
-        usecase "View Reports" as UC5
-        usecase "Search Books" as UC6
-        usecase "Issue Book" as UC7
-        usecase "Request Book" as UC8
-        usecase "Return Book" as UC9
-        usecase "View Issued Books" as UC10
-    }
+    subgraph "Library Management System"
+        UC1([Login / Signup])
+        UC2([Manage Books])
+        UC3([Manage Students])
+        UC4([Approve Requests])
+        UC5([View Reports])
+        UC6([Search Books])
+        UC7([Issue Book])
+        UC8([Request Book])
+        UC9([Return Book])
+        UC10([View Issued Books])
+    end
 
-    Admin --> UC1
-    Admin --> UC2
-    Admin --> UC3
-    Admin --> UC4
-    Admin --> UC5
+    Admin --- UC1
+    Admin --- UC2
+    Admin --- UC3
+    Admin --- UC4
+    Admin --- UC5
 
-    Student --> UC1
-    Student --> UC6
-    Student --> UC7
-    Student --> UC8
-    Student --> UC9
-    Student --> UC10
+    Student --- UC1
+    Student --- UC6
+    Student --- UC7
+    Student --- UC8
+    Student --- UC9
+    Student --- UC10
+
+    style Admin fill:#f9f,stroke:#333,stroke-width:2px
+    style Student fill:#f9f,stroke:#333,stroke-width:2px
 ```
 
 ## ⚙️ Setup Instructions
