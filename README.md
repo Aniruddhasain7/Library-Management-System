@@ -161,8 +161,12 @@ CREATE TABLE book_requests (
 
 ## 📁 Project Structure
 
-- `app.py`: Main Flask application with API endpoints.
-- `db.py`: Database connection configuration.
-- `index.html`: Frontend structure.
-- `style.css`: UI styling and layout.
-- `script.js`: Frontend logic and API integration.
+```
+Library Management System/
+├── app.py              # Main Flask application & API routes
+├── db.py               # Database connection & configuration
+├── index.html          # Frontend UI structure (HTML5)
+├── style.css           # UI styling and layout (CSS3)
+├── script.js           # Frontend logic & API integration (JS)
+└── README.md           # Project documentation & setup guide
+```
